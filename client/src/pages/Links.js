@@ -12,7 +12,9 @@ import node from "../Images/node.png";
 import Nav from "../components/Nav";
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
-
+import html5 from "../Images/html5.png";
+import js from "../Images/js.png";
+import jquery from "../Images/jquery.png"
 
 
 function Links() {
@@ -109,6 +111,19 @@ function Links() {
             {" "}
             Node <img src={node} width="50" height="50" alt="node" data-category="Node.js" />{" "}
           </button>
+          <br />
+          <button onClick={viewLinks} data-category="HTML5">
+            {" "}
+            HTML5 <img src={html5} width="50" height="50" alt="html5" data-category="HTML5" />{" "}
+          </button>
+          <button onClick={viewLinks} data-category="Javascript">
+            {" "}
+            Javascript <img src={js} width="50" height="50" alt="js" data-category="Javascript" />{" "}
+          </button>
+          <button onClick={viewLinks} data-category="JQuery">
+            {" "}
+            JQuery <img src={jquery} width="50" height="50" alt="js" data-category="JQuery" />{" "}
+          </button>
           <Jumbotron>
             <h1> Submit a New Link for Reference </h1>{" "}
           </Jumbotron>{" "}
@@ -124,7 +139,9 @@ function Links() {
     <option value="Express" />
     <option value="ReactJS" />
     <option value="Node.js" />
-    
+    <option value="HTML5" />
+    <option value="Javascript" />
+    <option value="JQuery" />
     </datalist>
             <Input
               onChange={handleInputChange}
